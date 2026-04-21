@@ -34,4 +34,4 @@ jobs:
         run: ./main
 
       - name: Run python unit tests
-        run: python -m unittest main.py
+        run: python -m unittest -v main.py

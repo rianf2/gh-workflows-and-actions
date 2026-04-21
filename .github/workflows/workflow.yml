@@ -38,5 +38,5 @@ jobs:
 
       - name: List all Github variables
         run: |
-             printf '$CI \n'
-             printf '$GITHUB_ACTION \n'
+             echo $CI
+             echo $GITHUB_ACTION

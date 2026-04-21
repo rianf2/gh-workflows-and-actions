@@ -15,10 +15,10 @@ on:
     inputs:
       choice:
         type: choice
-        description: Some weird text here
+        description: Choose what to do with this workflow
         options:
-        - option1
-        - option2
+        - Run the C++ executable
+        - Run the Python unittest
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,19 +32,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - name: Print provided inputs
-        run: echo $"{{github.event.input.choice}}"      
-
-      # Runs a single command using the runners shell
-      - name: Build code
-        run: g++ main.cpp -o main
-
-      # Runs a set of commands using the runners shell
-      - name: Run executable
-        run: ./main
-
-      - name: Run python unit tests
-        run: python -m unittest -v main.py
+      - name: $"{{github.event.input.choice}}"
+        run: |
+             if [[ $"{{github.event.input.choice}}" == "Run the C++ executable" ]]; then
+               g++ main.cpp -o main
+               ./main
+             else
+               python -m unittest -v main.py
 
       - name: List all Github variables
         run: |

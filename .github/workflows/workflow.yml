@@ -35,3 +35,8 @@ jobs:
 
       - name: Run python unit tests
         run: python -m unittest -v main.py
+
+      - name: List all Github variables
+        run: |
+             $CI
+             $GITHUB_ACTION

@@ -39,6 +39,7 @@ jobs:
                ./main
              else
                python -m unittest -v main.py
+             fi
 
       - name: List all Github variables
         run: |

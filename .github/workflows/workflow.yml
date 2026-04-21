@@ -39,8 +39,8 @@ jobs:
       - name: List all Github variables
         run: |
              echo -e 'CI: $CI'
-             echo $GITHUB_ACTION
-             echo $GITHUB_ACTION_PATH
+             echo -e 'GITHUB_ACTION: $GITHUB_ACTION'
+             echo -e 'GITHUB_ACTION_PATH: $GITHUB_ACTION_PATH'
              echo $GITHUB_ACTION_REPOSITORY
              echo $GITHUB_ACTIONS
              echo $GITHUB_ACTOR

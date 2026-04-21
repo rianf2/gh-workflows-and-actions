@@ -5,7 +5,7 @@ class Number:
         self.value = value
 
     def get_value(self):
-        return this.value
+        return self.value
 
 class TestNumber(unittest.TestCase):
     def test_get_value(self):

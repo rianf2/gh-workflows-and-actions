@@ -2,7 +2,7 @@ import unittest
 
 class Number:
     def __init__(self, value):
-        this.value = value
+        self.value = value
 
     def get_value(self):
         return this.value

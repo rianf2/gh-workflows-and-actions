@@ -31,4 +31,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run executable
-        run: ./main    
+        run: ./main
+
+      - name: Run python unit tests
+        run: python -m unittest main.py

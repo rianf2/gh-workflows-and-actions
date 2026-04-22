@@ -26,10 +26,10 @@ jobs:
     needs: say-hello
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Do something
         run: |
-             echo -e 'Choice: ' ${{ github.event.input.choice }}
+             echo 'Run selected choice'
              if [[ $"{{github.event.input.choice}}" == "Run the C++ executable" ]]; then
                g++ main.cpp -o main
                ./main

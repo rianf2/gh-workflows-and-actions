@@ -22,7 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name:  Show workflow params
-        run:  echo "Environment: ${{ github.event.inputs.environment }}"
+        run:  |
+          echo -e "Environment: ${{ inputs.environment }}"
   
   build:
     needs: say-hello

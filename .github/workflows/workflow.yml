@@ -34,7 +34,7 @@ jobs:
 
       - name: Do something
         run: |
-             echo -e 'Choice: ' ${github.event.input.choice}
+             echo -e 'Choice: ' ${{ github.event.input.choice }}
              if [[ $"{{github.event.input.choice}}" == "Run the C++ executable" ]]; then
                g++ main.cpp -o main
                ./main

@@ -8,9 +8,11 @@ on:
 
   workflow_dispatch:
     inputs:
-      choice:
-        type: choice
+      environment:
         description: Choose what to do with this workflow
+        required: true
+        default: Run the C++ executable
+        type: choice
         options:
         - Run the C++ executable
         - Run the Python unittest
@@ -19,8 +21,8 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Say hello
-        run: echo 'Hello World!'
+      - name:  Show workflow params
+        run:  echo "Environment: ${{ github.event.inputs.environment }}"
   
   build:
     needs: say-hello

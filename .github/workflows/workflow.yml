@@ -48,7 +48,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name:  Build C++
-        run:  g++ main.cpp -o main
+        run: |
+          g++ main.cpp -o main
+          ls -al main
   
   run:
     needs: cpp-build

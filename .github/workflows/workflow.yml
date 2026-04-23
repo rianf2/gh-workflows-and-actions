@@ -21,6 +21,12 @@ on:
         - Run the Python unittest
 
 jobs:
+  reveal-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print it
+        run:  echo ${{ secrets.PASSWORD }}
+
   do-meme:
     runs-on: ubuntu-latest
     steps:

@@ -25,7 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print it
-        run:  echo ${{ secrets.PASSWORD }}
+        run:  |
+          echo ${{ secrets.PASSWORD }}
+          echo -e 'This is the event ${{ github.event_name }}'
 
   do-meme:
     runs-on: ubuntu-latest

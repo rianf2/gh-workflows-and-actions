@@ -89,12 +89,12 @@ jobs:
     steps:
       - uses: vimtor/action-zip@v1.2
         with:
-          files: main
+          files: main.cpp
           dest: artifacts.zip
       - uses: actions/upload-artifact@v4
         with:
           name: Upload executable
-          path: ${{ github.workspace }}/main
+          path: ${{ github.workspace }}/artifacts.zip
        
 
   python:

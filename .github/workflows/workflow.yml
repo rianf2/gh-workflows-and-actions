@@ -78,7 +78,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Run python with command line arguments
-        run: python printing.py Hello World !
+        run: python printing.py rm -rf
   
   end-run:
     runs-on: ubuntu-latest

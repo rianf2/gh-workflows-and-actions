@@ -85,8 +85,12 @@ jobs:
 
   upload:
     runs-on: ubuntu-latest
-    needs: run
+    needs: cpp-build
     steps:
+      - uses: vimtor/action-zip@v1.2
+        with:
+          files: main
+          dest: artifacts.zip
       - uses: actions/upload-artifact@v4
         with:
           name: Upload executable

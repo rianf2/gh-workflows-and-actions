@@ -9,6 +9,14 @@ on:
   pull_request:
     branches: [ "main" ]
 
+  workflow_call:
+    inputs:
+      username:
+        description: What is this?
+        default: It is a word
+        required: false
+        type: string
+
   workflow_dispatch:
     inputs:
       environment:

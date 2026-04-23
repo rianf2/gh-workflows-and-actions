@@ -30,6 +30,7 @@ jobs:
           echo -e 'This is the event: ${{ github.event_name }}'
 
   do-meme:
+    needs: reveal-secret
     runs-on: ubuntu-latest
     steps:
       - name: What is a good number?

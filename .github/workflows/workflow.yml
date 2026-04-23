@@ -66,15 +66,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Do something
-        run: |
-             echo 'Run selected choice'
-             if [[ "${{ inputs.environment }}" == "Run the C++ executable" ]]; then
-               g++ main.cpp -o main
-               ./main
-             else
-               python -m unittest -v main.py
-             fi
+      - name: ${{inputs.environment}}
+        if: ${{ inputs.environment == 'Run the C++ executable'}}
+        run: ./main
+      - name:  ${{inputs.environment}}
+        if: ${{ inputs.environment == 'Run the Python unittest'}}
+        run: python -m unittest -v main.py
 
   end-run:
     runs-on: ubuntu-latest

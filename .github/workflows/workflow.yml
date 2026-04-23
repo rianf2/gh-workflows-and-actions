@@ -73,6 +73,13 @@ jobs:
         if: ${{ inputs.environment == 'Run the Python unittest'}}
         run: python -m unittest -v main.py
 
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Run python with command line arguments
+        run: python printing.py Hello World !
+  
   end-run:
     runs-on: ubuntu-latest
     needs: [github-vars, run]

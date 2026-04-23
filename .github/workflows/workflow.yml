@@ -42,7 +42,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: What is a good number?
-        run: echo "$MEME"
+        run: | 
+          echo "$MEME"
+          echo -e 'Username ${{ inputs.username }}'
 
   github-vars:
     needs: do-meme

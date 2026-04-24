@@ -37,6 +37,14 @@ jobs:
           echo ${{ secrets.PASSWORD }}
           echo -e 'This is the event: ${{ github.event_name }}'
 
+  say:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: |
+          echo print
+        
+
   do-meme:
     needs: reveal-secret
     runs-on: ubuntu-latest

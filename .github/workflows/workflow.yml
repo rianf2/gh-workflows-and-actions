@@ -56,13 +56,14 @@ jobs:
  
   hello-world:
     runs-on: ubuntu-latest
-    name: Saying hello job
     steps:
       - uses: actions/checkout@v6
-      - id: foo
-        uses: ./github/workflows/action@5cda04b
-        with:
-          who: Rian
+      - name: What
+        run: ls
+      #- id: foo
+        #uses: ./github/workflows/action@5cda04b
+        #with:
+         # who: Rian
       #-run: echo random-number "$RANDOM_NUMBER"
       #  shell: bash
       #  env:

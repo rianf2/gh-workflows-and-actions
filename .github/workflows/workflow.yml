@@ -60,7 +60,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - id: foo
-        uses: ./action@5cda04b
+        uses: ./github/workflows/action@5cda04b
         with:
           who: Rian
       #-run: echo random-number "$RANDOM_NUMBER"

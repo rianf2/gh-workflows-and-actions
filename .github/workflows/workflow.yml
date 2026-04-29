@@ -111,8 +111,4 @@ jobs:
       - uses: actions/checkout@v6
       - name: Run python with command line arguments
         run: python printing.py rm -rf
-
-    steps:
-      - name: Goodbye
-        run: echo "Goodbye world!"
         

@@ -42,8 +42,10 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: .github/workflows/action@5cda04bcb188b8a6ae81a2e1c02a50369ae27fc8
-        with:
-          who: Rian
+      - name: Ahhhhhhhhhhhhhhhhhhhhhhhh
+        run: ls -al .
+        #with:
+          #who: Rian
       #-run: echo random-number "$RANDOM_NUMBER"
       #  shell: bash
       #  env:

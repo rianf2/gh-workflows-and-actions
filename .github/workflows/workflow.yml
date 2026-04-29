@@ -59,7 +59,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - id: foo
-        uses: ./github/workflows/action.yml
+        uses: rianf2/action@5cda04bcb188b8a6ae81a2e1c02a50369ae27fc8
         with:
           who: Rian
       #-run: echo random-number "$RANDOM_NUMBER"

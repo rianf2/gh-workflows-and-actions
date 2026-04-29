@@ -58,11 +58,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Saying hello job
     steps:
-      -uses: actions/checkout@v6
-      -id: foo
-      uses: action
-      with:
-        who: Rian
+      - uses: actions/checkout@v6
+      - id: foo
+        uses: ./action
+        with:
+          who: Rian
       #-run: echo random-number "$RANDOM_NUMBER"
       #  shell: bash
       #  env:

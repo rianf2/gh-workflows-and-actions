@@ -59,7 +59,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: What
-        run: ls
+        run: ls -al
       #- id: foo
         #uses: ./github/workflows/action@5cda04b
         #with:
